@@ -8,6 +8,7 @@
       <vertices xsi:type="sgraph:State" xmi:id="_tCipoEs_Ee23KIjyzG0CuA" specification="entry / &#xD;&#xA;opLedUpdate();&#xD;&#xA;viMyCounter++" name="Toggle" incomingTransitions="_tCiCkks_Ee23KIjyzG0CuA _tCiprEs_Ee23KIjyzG0CuA">
         <outgoingTransitions xmi:id="_tCiprEs_Ee23KIjyzG0CuA" specification="after 500 ms" target="_tCipoEs_Ee23KIjyzG0CuA"/>
       </vertices>
+      <vertices xsi:type="sgraph:FinalState" xmi:id="_qa1g8FC4Ee2rGLvLbr1lyg"/>
     </regions>
   </sgraph:Statechart>
   <notation:Diagram xmi:id="_O4nPsAClEea895739UzP5A" type="org.yakindu.sct.ui.editor.editor.StatechartDiagramEditor" element="_O39IYAClEea895739UzP5A" measurementUnit="Pixel">
@@ -20,7 +21,7 @@
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_O6PnZAClEea895739UzP5A"/>
       </children>
       <styles xsi:type="notation:StringValueStyle" xmi:id="_w97D8ACsEea895739UzP5A" name="featureToShow" stringValue="specification"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_O6PnZQClEea895739UzP5A" x="10" y="10" width="336" height="596"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_O6PnZQClEea895739UzP5A" x="10" y="10" width="276" height="595"/>
     </children>
     <children xmi:id="_tChbgEs_Ee23KIjyzG0CuA" type="Region" element="_tCiCkEs_Ee23KIjyzG0CuA">
       <children xsi:type="notation:DecorationNode" xmi:id="_tChbgUs_Ee23KIjyzG0CuA" type="RegionName">
@@ -60,10 +61,10 @@
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_tChbm0s_Ee23KIjyzG0CuA"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_tChbnEs_Ee23KIjyzG0CuA" fontName="Verdana" fillColor="16448250" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_tChbnUs_Ee23KIjyzG0CuA" width="234" height="204"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_tChbnUs_Ee23KIjyzG0CuA" x="291" y="10" width="234" height="204"/>
     </children>
     <styles xsi:type="notation:DiagramStyle" xmi:id="_O4nPsQClEea895739UzP5A"/>
-    <styles xsi:type="notation:BooleanValueStyle" xmi:id="_605H0CuJEeiIGeIuy-9ybQ" name="inlineDefinitionSection"/>
+    <styles xsi:type="notation:BooleanValueStyle" xmi:id="_605H0CuJEeiIGeIuy-9ybQ" name="inlineDefinitionSection" booleanValue="true"/>
     <edges xmi:id="_tCjQsEs_Ee23KIjyzG0CuA" type="Transition" element="_tCiCkks_Ee23KIjyzG0CuA" source="_tChbhUs_Ee23KIjyzG0CuA" target="_tChbj0s_Ee23KIjyzG0CuA">
       <children xsi:type="notation:DecorationNode" xmi:id="_tCjQsUs_Ee23KIjyzG0CuA" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_tCjQsks_Ee23KIjyzG0CuA"/>
