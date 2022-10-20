@@ -10,7 +10,6 @@ Implementation of the state machine 'Statechart'
 
 
 Statechart::Statechart() :
-	myEvent_raised(false),
 	viMyCounter(0),
 	timerService(sc_null),
 	isExecuting(false)
@@ -47,11 +46,6 @@ void Statechart::dispatch_event(SctEvent * event)
 	}
 	switch(event->name)
 	{
-		case myEvent:
-		{
-			iface_dispatch_event(event);
-			break;
-		}
 		case Statechart_Toggle_Toggle_time_event_0:
 		{
 			timeEvents[0] = true;
@@ -68,11 +62,6 @@ void Statechart::iface_dispatch_event(SctEvent * event)
 {
 	switch(event->name)
 	{
-		case myEvent:
-		{
-			internal_raiseMyEvent();
-			break;
-		}
 		default:
 			/* do nothing */
 			break;
@@ -160,16 +149,6 @@ sc_boolean Statechart::isStateActive(StatechartStates state) const
 	}
 }
 
-/* Functions for event myEvent in interface  */
-void Statechart::raiseMyEvent()
-{
-	inEventQueue.push_back(new SctEvent__myEvent(myEvent));
-        runCycle();
-}
-void Statechart::internal_raiseMyEvent()
-{
-	myEvent_raised = true;
-}
 
 // implementations of all internal functions
 /* Entry action for state 'Toggle'. */
@@ -255,16 +234,7 @@ sc_integer Statechart::Toggle_Toggle_react(const sc_integer transitioned_before)
 			enseq_Toggle_Toggle_default();
 			react(0);
 			transitioned_after = 0;
-		}  else
-		{
-			if (myEvent_raised)
-			{ 
-				exseq_Toggle_Toggle();
-				enseq_Toggle_Toggle_default();
-				react(0);
-				transitioned_after = 0;
-			} 
-		}
+		} 
 	} 
 	/* If no transition was taken then execute local reactions */
 	if ((transitioned_after) == (transitioned_before))
@@ -275,7 +245,6 @@ sc_integer Statechart::Toggle_Toggle_react(const sc_integer transitioned_before)
 }
 
 void Statechart::clearInEvents() {
-	myEvent_raised = false;
 	timeEvents[0] = false;
 }
 
@@ -306,7 +275,7 @@ void Statechart::runCycle() {
 		microStep();
 		clearInEvents();
 		dispatch_event(getNextEvent());
-	} while ((myEvent_raised) || (timeEvents[0]));
+	} while (timeEvents[0]);
 	isExecuting = false;
 }
 
