@@ -8,7 +8,6 @@
       <vertices xsi:type="sgraph:State" xmi:id="_tCipoEs_Ee23KIjyzG0CuA" specification="entry / &#xD;&#xA;opLedUpdate();&#xD;&#xA;viMyCounter++" name="Toggle" incomingTransitions="_tCiCkks_Ee23KIjyzG0CuA _tCiprEs_Ee23KIjyzG0CuA">
         <outgoingTransitions xmi:id="_tCiprEs_Ee23KIjyzG0CuA" specification="after 500 ms" target="_tCipoEs_Ee23KIjyzG0CuA"/>
       </vertices>
-      <vertices xsi:type="sgraph:FinalState" xmi:id="_qa1g8FC4Ee2rGLvLbr1lyg"/>
     </regions>
   </sgraph:Statechart>
   <notation:Diagram xmi:id="_O4nPsAClEea895739UzP5A" type="org.yakindu.sct.ui.editor.editor.StatechartDiagramEditor" element="_O39IYAClEea895739UzP5A" measurementUnit="Pixel">
