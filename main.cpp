@@ -40,7 +40,7 @@ void smTick(void)
     smTickFlag = true;
 }
 
- 
+ // empieza el main
 int main()
 {
 	/*! Sets the timer service */
