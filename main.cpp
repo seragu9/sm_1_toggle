@@ -54,7 +54,7 @@ int main()
     // while
     while (true) {
 
-		/* Checking the waited Flag */
+		/* Checkea el Flag */
         if (smTickFlag == true) {
 			/* Then reset its Flag */
             smTickFlag = false;
