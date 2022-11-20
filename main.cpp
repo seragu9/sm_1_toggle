@@ -51,7 +51,7 @@ int main()
     
 	/*! Enters the state machine; from this point on the state machine is ready to react on incoming event */
 	sm->enter();
-
+    // while
     while (true) {
 
 		/* Checking the waited Flag */
